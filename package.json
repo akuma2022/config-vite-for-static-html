@@ -1,0 +1,31 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "files": ["dist"],
+  "scripts": {
+    "test": "",
+    "twc": "npx tailwindcss-cli build global.css -o src/css/global.css",
+    "swc": "sass --watch src/scss:src/css",
+    "vwc": "npm run twc && vite",
+    "dev": "npm-run-all -p swc vwc --NODE_ENV=development",
+    "build:vite": "vite build",
+    "build": "npm run build:vite --NODE_ENV=production",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "cross-env": "^7.0.3",
+    "cssnano": "^6.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.28",
+    "postcss-import": "^15.1.0",
+    "postcss-nesting": "^12.0.1",
+    "sass": "^1.66.0",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.9"
+  }
+}
